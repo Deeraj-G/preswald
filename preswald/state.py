@@ -181,8 +181,8 @@ class WorkflowContext:
 
     def set_result(self, atom_name: str, result: AtomResult):
         self.results[atom_name] = result
-        if result.status == AtomStatus.COMPLETED:
-            self.variables[atom_name] = result.value
+        # if result.status == AtomStatus.COMPLETED:
+        self.variables[atom_name] = result.value
 
 
 class Workflow:
